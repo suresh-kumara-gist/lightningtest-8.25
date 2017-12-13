@@ -74,6 +74,20 @@
                 "type:drupal-drush"
             ]
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patches": {
+            "drupal/search_api_solr": {
+                "Port solr_devel functionality into Search API Solr-8.x":
+                "https://www.drupal.org/files/issues/search_api_solr-8.x-1.x-2918243-9.patch"
+            },
+            "drupal/core": {
+                "2446681 - TranslationLanguageRenderer not rendering a field from a relationship":
+                "https://www.drupal.org/files/issues/2446681-22.patch",
+                "2689459 - fix to make the original URL alias work for translations":
+                "https://www.drupal.org/files/issues/2689459-61.patch",
+                 "fix delete url alias of source entity":
+                "../../docops-dec13th/patches/drupal/delete-url-alias-of-source-entity.patch"
+            }
+        }        
     }
 }
